@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+db_config.json
+exports/*.csv
+CODEBASE_GUIDE.md

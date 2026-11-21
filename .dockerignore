@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pdf
+.git/
+.gitignore
+db_config.json
+Dockerfile
+docker-compose.yml
+.dockerignore
+docker-run.sh
+exports/
+*.bat
+.gitattributes

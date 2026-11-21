@@ -1,0 +1,288 @@
+{
+  "users": [
+    {
+      "user_id": 1,
+      "username": "admin",
+      "password_hash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "Admin",
+      "full_name": "Marcus Vance (Administrator)"
+    },
+    {
+      "user_id": 2,
+      "username": "staff",
+      "password_hash": "10176e7b7b24d317acfcf8d2064cfd2f24e154f7b5a96603077d5ef813d6a6b6",
+      "role": "Staff",
+      "full_name": "Elena Rostova (Desk Staff)"
+    },
+    {
+      "user_id": 3,
+      "username": "manager",
+      "password_hash": "866485796cfa8d7c0cf7111640205b83076433547577511d81f8030ae99ecea5",
+      "role": "Manager",
+      "full_name": "David Sterling (Operations Mgr)"
+    }
+  ],
+  "trainers": [
+    {
+      "trainer_id": 101,
+      "full_name": "Alex 'Titan' Rivera",
+      "phone": "+1-555-0192",
+      "specialization": "Strength & Bodybuilding",
+      "monthly_salary": 4500.0,
+      "hire_date": "2023-01-15"
+    },
+    {
+      "trainer_id": 102,
+      "full_name": "Sarah Jenkins",
+      "phone": "+1-555-0144",
+      "specialization": "HIIT & Cardio Conditioning",
+      "monthly_salary": 4200.0,
+      "hire_date": "2023-03-20"
+    },
+    {
+      "trainer_id": 103,
+      "full_name": "Liam Chen",
+      "phone": "+1-555-0188",
+      "specialization": "CrossFit & Mobility",
+      "monthly_salary": 4400.0,
+      "hire_date": "2023-06-10"
+    },
+    {
+      "trainer_id": 104,
+      "full_name": "Priya Sharma",
+      "phone": "+1-555-0131",
+      "specialization": "Yoga & Pilates",
+      "monthly_salary": 3900.0,
+      "hire_date": "2023-08-01"
+    },
+    {
+      "trainer_id": 105,
+      "full_name": "Marcus Brody",
+      "phone": "+1-555-0177",
+      "specialization": "Athletic Rehab & Powerlifting",
+      "monthly_salary": 4800.0,
+      "hire_date": "2022-11-05"
+    }
+  ],
+  "packages": [
+    {
+      "package_id": 1,
+      "package_name": "Monthly Starter",
+      "duration_days": 30,
+      "fee": 59.99,
+      "description": "Standard 30-day gym floor access with basic cardio and weights."
+    },
+    {
+      "package_id": 2,
+      "package_name": "Quarterly Pro",
+      "duration_days": 90,
+      "fee": 159.99,
+      "description": "90-day all-access membership including locker room and steam bath."
+    },
+    {
+      "package_id": 3,
+      "package_name": "Semi-Annual Elite",
+      "duration_days": 180,
+      "fee": 289.99,
+      "description": "6 months full access with complimentary nutrition consultation."
+    },
+    {
+      "package_id": 4,
+      "package_name": "Annual VIP Champion",
+      "duration_days": 365,
+      "fee": 499.99,
+      "description": "365 days unlimited 24/7 access, VIP lounge, guest passes, and towel service."
+    },
+    {
+      "package_id": 5,
+      "package_name": "Student Flex 30",
+      "duration_days": 30,
+      "fee": 39.99,
+      "description": "Discounted 30-day access for active students with valid ID."
+    }
+  ],
+  "members": [
+    {
+      "member_id": 1001,
+      "full_name": "Johnathan Miller",
+      "phone": "+1-555-1101",
+      "email": "j.miller@example.com",
+      "gender": "Male",
+      "join_date": "2024-01-10",
+      "trainer_id": 101
+    },
+    {
+      "member_id": 1002,
+      "full_name": "Emily Watson",
+      "phone": "+1-555-1102",
+      "email": "emily.w@example.com",
+      "gender": "Female",
+      "join_date": "2024-02-15",
+      "trainer_id": 102
+    },
+    {
+      "member_id": 1003,
+      "full_name": "Michael Chang",
+      "phone": "+1-555-1103",
+      "email": "mchang@example.com",
+      "gender": "Male",
+      "join_date": "2024-03-01",
+      "trainer_id": 103
+    },
+    {
+      "member_id": 1004,
+      "full_name": "Sophia Rodriguez",
+      "phone": "+1-555-1104",
+      "email": "sophia.r@example.com",
+      "gender": "Female",
+      "join_date": "2024-04-12",
+      "trainer_id": 104
+    },
+    {
+      "member_id": 1005,
+      "full_name": "David Kim",
+      "phone": "+1-555-1105",
+      "email": "dkim@example.com",
+      "gender": "Male",
+      "join_date": "2024-05-20",
+      "trainer_id": 101
+    },
+    {
+      "member_id": 1006,
+      "full_name": "Chloe Bennett",
+      "phone": "+1-555-1106",
+      "email": "chloe.b@example.com",
+      "gender": "Female",
+      "join_date": "2024-06-18",
+      "trainer_id": 102
+    },
+    {
+      "member_id": 1007,
+      "full_name": "Robert Downey",
+      "phone": "+1-555-1107",
+      "email": "rdowney@example.com",
+      "gender": "Male",
+      "join_date": "2024-07-04",
+      "trainer_id": null
+    },
+    {
+      "member_id": 1008,
+      "full_name": "Amina Al-Mansoor",
+      "phone": "+1-555-1108",
+      "email": "amina.m@example.com",
+      "gender": "Female",
+      "join_date": "2024-08-11",
+      "trainer_id": 104
+    },
+    {
+      "member_id": 1009,
+      "full_name": "Lucas Silva",
+      "phone": "+1-555-1109",
+      "email": "lucas.s@example.com",
+      "gender": "Male",
+      "join_date": "2024-09-02",
+      "trainer_id": 105
+    },
+    {
+      "member_id": 1010,
+      "full_name": "Grace Hopper",
+      "phone": "+1-555-1110",
+      "email": "grace.h@example.com",
+      "gender": "Female",
+      "join_date": "2024-09-25",
+      "trainer_id": null
+    }
+  ],
+  "subscriptions": [
+    {
+      "sub_id": 5001,
+      "member_id": 1001,
+      "package_id": 4,
+      "start_date": "2026-09-16",
+      "end_date": "2027-09-16",
+      "amount_paid": 499.99,
+      "payment_method": "Credit Card"
+    },
+    {
+      "sub_id": 5002,
+      "member_id": 1002,
+      "package_id": 1,
+      "start_date": "2026-10-20",
+      "end_date": "2026-11-19",
+      "amount_paid": 59.99,
+      "payment_method": "Debit Card"
+    },
+    {
+      "sub_id": 5003,
+      "member_id": 1003,
+      "package_id": 2,
+      "start_date": "2026-08-19",
+      "end_date": "2026-11-17",
+      "amount_paid": 159.99,
+      "payment_method": "Cash"
+    },
+    {
+      "sub_id": 5004,
+      "member_id": 1004,
+      "package_id": 2,
+      "start_date": "2026-10-01",
+      "end_date": "2026-12-30",
+      "amount_paid": 159.99,
+      "payment_method": "Bank Transfer"
+    },
+    {
+      "sub_id": 5005,
+      "member_id": 1005,
+      "package_id": 1,
+      "start_date": "2026-10-06",
+      "end_date": "2026-11-05",
+      "amount_paid": 59.99,
+      "payment_method": "Cash"
+    },
+    {
+      "sub_id": 5006,
+      "member_id": 1006,
+      "package_id": 3,
+      "start_date": "2026-09-06",
+      "end_date": "2027-03-05",
+      "amount_paid": 289.99,
+      "payment_method": "Credit Card"
+    },
+    {
+      "sub_id": 5007,
+      "member_id": 1007,
+      "package_id": 5,
+      "start_date": "2026-09-21",
+      "end_date": "2026-10-21",
+      "amount_paid": 39.99,
+      "payment_method": "Credit Card"
+    },
+    {
+      "sub_id": 5008,
+      "member_id": 1008,
+      "package_id": 1,
+      "start_date": "2026-11-03",
+      "end_date": "2026-12-03",
+      "amount_paid": 59.99,
+      "payment_method": "UPI / Digital"
+    },
+    {
+      "sub_id": 5009,
+      "member_id": 1009,
+      "package_id": 1,
+      "start_date": "2026-10-22",
+      "end_date": "2026-11-21",
+      "amount_paid": 59.99,
+      "payment_method": "Debit Card"
+    },
+    {
+      "sub_id": 5010,
+      "member_id": 1010,
+      "package_id": 4,
+      "start_date": "2026-07-23",
+      "end_date": "2027-07-23",
+      "amount_paid": 499.99,
+      "payment_method": "Bank Transfer"
+    }
+  ]
+}

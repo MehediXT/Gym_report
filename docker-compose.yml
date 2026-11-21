@@ -1,0 +1,53 @@
+# IronPulse Fitness — MariaDB database + desktop GUI app
+#
+# Start:   ./docker-run.sh          (grants X11 access, then docker compose up)
+# Stop:    docker compose down      (add -v to also delete the database volume)
+
+services:
+  db:
+    image: mariadb:11.4
+    container_name: ironpulse-db
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${GYM_DB_ROOT_PASSWORD:-rootpass}
+      MARIADB_DATABASE: gym_db
+      MARIADB_USER: gym_app
+      MARIADB_PASSWORD: ${GYM_DB_PASSWORD:-gym_pass}
+      TZ: ${TZ:-UTC}                # audit log timestamps use this timezone
+    volumes:
+      - gym_db_data:/var/lib/mysql
+    ports:
+      # Exposed on 3307 so it does not clash with a MySQL/MariaDB already running on the host
+      - "127.0.0.1:3307:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  app:
+    build:
+      context: .
+      args:
+        APP_UID: ${APP_UID:-1000}
+        APP_GID: ${APP_GID:-1000}
+    image: ironpulse-gym:latest
+    container_name: ironpulse-app
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DISPLAY: ${DISPLAY:-:0}
+      GYM_DB_BACKEND: mysql
+      GYM_DB_HOST: db
+      GYM_DB_PORT: "3306"
+      GYM_DB_USER: gym_app
+      GYM_DB_PASSWORD: ${GYM_DB_PASSWORD:-gym_pass}
+      GYM_DB_NAME: gym_db
+      TZ: ${TZ:-UTC}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ./exports:/app/exports      # CSV exports appear in the project's exports/ folder
+
+volumes:
+  gym_db_data:
